@@ -26,6 +26,8 @@ function sortProducts (products = [], options = {}) {
 
 }
 
+//HERE YOU CAN PLAY AROUND
+
 // const result = sortProducts(products) // {highest: [...], lowest: [...]}
 // console.info(result)
 

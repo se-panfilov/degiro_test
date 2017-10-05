@@ -24,22 +24,24 @@ function sortProducts (products = [], options = {}) {
     return {highest, lowest}
 }
 
+//HERE YOU CAN PLAY AROUND
+
 // const result1 = sortProducts(products, {size: 4}) // {highest: null, lowest: null}
 // console.info('----RESULT1----')
 // console.info(result1)
-//
+
 // const result2 = sortProducts(products, {size: 3}) // {highest: [...], lowest: [null}
 // console.info('----RESULT2----')
 // console.info(result2)
-//
+
 // const result3 = sortProducts(products, {size: 2}) // {highest: [...], lowest: [...]}
 // console.info('----RESULT3----')
 // console.info(result3)
-//
+
 // const result4 = sortProducts(products, {size: 1}) // {highest: [...], lowest: [...]}
 // console.info('----RESULT4----')
 // console.info(result4)
-//
+
 // const result5 = sortProducts(products, {size: 0}) // {highest: null, lowest: null}
 // console.info('----RESULT5----')
 // console.info(result5)
