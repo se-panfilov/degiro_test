@@ -12,6 +12,8 @@ const products = [
  **/
 function sortProducts (products = [], options = {}) {
     const size = (options.size || options.size === 0) ? +options.size : 5
+    if (size === 0) return {highest: null, lowest: null}
+
     const sortedProducts = products.concat([])
     sortedProducts.sort((a, b) => {
         return a.price - b.price

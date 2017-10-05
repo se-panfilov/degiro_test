@@ -92,4 +92,16 @@ describe('size checks', () => {
         const result = sortProducts(products, options)
         expect(result).toEqual(expectedResult)
     })
+
+    test('zero size check', () => {
+        const expectedResult = {
+            highest: null,
+            lowest: null
+        }
+
+        const options = {size: 0}
+
+        const result = sortProducts(products, options)
+        expect(result).toEqual(expectedResult)
+    })
 })
