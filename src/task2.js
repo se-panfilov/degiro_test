@@ -13,12 +13,13 @@ function sortProducts (products = [], options = {}) {
     const size = (options.size || options.size === 0) ? +options.size : 5
     if (size === 0) return {highest: null, lowest: null}
 
-    const sortedProducets = products.sort((a, b) => {
+    const sortedProducts = products.concat([])
+    sortedProducts.sort((a, b) => {
         return a.price - b.price
     })
 
-    const lowest = (size < products.length) ? sortedProducets.slice(0, size) : null
-    const highest = (size <= products.length) ? sortedProducets.slice(sortedProducets.length - size) : null
+    const lowest = (size < products.length) ? sortedProducts.slice(0, size) : null
+    const highest = (size <= products.length) ? sortedProducts.slice(sortedProducts.length - size) : null
 
     return {highest, lowest}
 }

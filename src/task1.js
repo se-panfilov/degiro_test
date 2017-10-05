@@ -12,13 +12,14 @@ const products = [
  **/
 function sortProducts (products = [], options = {}) {
     const size = (options.size || options.size === 0) ? +options.size : 5
-    const sortedProducets = products.sort((a, b) => {
+    const sortedProducts = products.concat([])
+    sortedProducts.sort((a, b) => {
         return a.price - b.price
     })
 
     return {
-        highest: sortedProducets.slice(sortedProducets.length - size),
-        lowest: sortedProducets.slice(0, size)
+        highest: sortedProducts.slice(sortedProducts.length - size),
+        lowest: sortedProducts.slice(0, size)
     }
 
 }
