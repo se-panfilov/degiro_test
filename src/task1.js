@@ -17,8 +17,8 @@ function sortProducts (products = [], options = {}) {
     })
 
     return {
-        highest: sortedProducets.slice(0, size),
-        lowest: sortedProducets.slice(sortedProducets.length - size)
+        highest: sortedProducets.slice(sortedProducets.length - size),
+        lowest: sortedProducets.slice(0, size)
     }
 
 }
