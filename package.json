@@ -1,0 +1,15 @@
+{
+  "name": "degiro_test",
+  "version": "1.0.0",
+  "main": "src/task1.js",
+  "repository": "git@github.com:se-panfilov/degiro_test.git",
+  "author": "Sergei <se-panfilov@ya.ru>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
