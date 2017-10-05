@@ -104,4 +104,26 @@ describe('size checks', () => {
         const result = sortProducts(products, options)
         expect(result).toEqual(expectedResult)
     })
+
+    test('check if size is string', () => {
+        const expectedResult = {
+            highest: [
+                {id: 6, price: 8},
+                {id: 11, price: 9},
+                {id: 1, price: 10},
+                {id: 2, price: 11},
+                {id: 12, price: 13}],
+            lowest: [
+                {id: 8, price: 0},
+                {id: 3, price: 1},
+                {id: 5, price: 1},
+                {id: 7, price: 3},
+                {id: 4, price: 3}]
+        }
+
+        const options = {size: '5'}
+
+        const result = sortProducts(products, options)
+        expect(result).toEqual(expectedResult)
+    })
 })
