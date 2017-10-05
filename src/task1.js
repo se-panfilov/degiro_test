@@ -24,6 +24,7 @@ function sortProducts (products = [], options = {}) {
 
 }
 
-const result = sortProducts(products) // {highest: [...], lowest: [...]}
+// const result = sortProducts(products) // {highest: [...], lowest: [...]}
+// console.info(result)
 
-console.info(result)
+module.exports = sortProducts
