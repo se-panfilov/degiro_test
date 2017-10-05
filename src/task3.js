@@ -53,20 +53,20 @@ function sortProducts (products = [], options = {}) {
 
 //HERE YOU CAN PLAY AROUND
 
-// const result1 = sortProducts(products) // {highest: [...], lowest: [...]}
-// console.info('----RESULT1----')
-// console.info(result1)
+const result1 = sortProducts(products) // {highest: [...], lowest: [...]}
+console.info('----RESULT1----')
+console.info(result1)
 
 // // call without modifications
-// const result2 = sortProducts(products) // {highest: null, lowest: null}
-// console.info('----RESULT2----')
-// console.info(result2)
+const result2 = sortProducts(products) // {highest: null, lowest: null}
+console.info('----RESULT2----')
+console.info(result2)
 
 // // call with modified data
-// products[1] = {id: 2, price: 11.5}
-// const result3 = sortProducts(products) // {highest: [...], lowest: [...]}
-// console.info('----RESULT3----')
-// console.info(result3)
+products[1] = {id: 2, price: 11.5}
+const result3 = sortProducts(products) // {highest: [...], lowest: [...]}
+console.info('----RESULT3----')
+console.info(result3)
 
 // // call without modifications
 // const result4 = sortProducts(products) // {highest: null, lowest: null}
