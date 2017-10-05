@@ -104,4 +104,68 @@ describe('memoization checks', () => {
         const result = sortProducts(products)
         expect(result).toEqual(expectedResult)
     })
+
+
+    test('should called twice without modifications return nuls', () => {
+        const products = [
+            {id: 1, price: 10},
+            {id: 2, price: 11},
+            {id: 3, price: 1},
+            {id: 4, price: 2},
+            {id: 5, price: 100},
+            {id: 6, price: 0.1}
+        ]
+
+        const expectedResult = {
+            highest: null,
+            lowest: null
+        }
+
+        sortProducts(products)
+        sortProducts(products)
+        products[1] = {id: 2, price: 11.5}
+        sortProducts(products)
+        const result = sortProducts(products)
+        expect(result).toEqual(expectedResult)
+    })
+})
+
+describe('check compareArrays func', () => {
+    test('should equal arrs return true', () => {
+        const arr1 = [
+            {id: 1, price: 10},
+            {id: 2, price: 11},
+            {id: 3, price: 1}
+        ]
+
+        const arr2 = [
+            {id: 1, price: 10},
+            {id: 2, price: 11},
+            {id: 3, price: 1}
+        ]
+
+        const result = compareArrays(arr1, arr2)
+        expect(result).toBeTruthy()
+        const result2 = compareArrays([1, 2], [1, 2])
+        expect(result2).toBeTruthy()
+    })
+
+    test('should non-equal arrs return false', () => {
+        const arr1 = [
+            {id: 1, price: 10},
+            {id: 2, price: 11},
+            {id: 3, price: 1}
+        ]
+
+        const arr2 = [
+            {id: 2, price: 10},
+            {id: 2, price: 11},
+            {id: 3, price: 1}
+        ]
+
+        const result = compareArrays(arr1, arr2)
+        expect(result).toBeFalsy()
+        const result2 = compareArrays(arr1, [])
+        expect(result2).toBeFalsy()
+    })
 })
